@@ -25,7 +25,6 @@ class CPU
 
             void save();
             void load();
-
         private:            
             char *_stack;
         public:
@@ -48,10 +47,13 @@ CPU::Context::Context(void (* func)(Tn ...), Tn ... an) {
     //Alocação da memória para a stack
     _context.uc_stack.ss_sp=malloc(STACK_SIZE);
     _context.uc_stack.ss_size=STACK_SIZE;
-    //Flags da stack (?)
+    //Flags da stack
     _context.uc_stack.ss_flags=0;
     // Criação e alocação do novo contexto
-    makecontext(&_context, func, 0);
+
+    makecontext(&_context, (void(*)(void))func, sizeof...(Tn),an...);
+    // Alocação da função passada como parâmetro como função a ser executada pelo contexto, passada junto do número de parâmetros dessa função (cabeça da lista)
+    // e quais são esses parâmetros (cauda da lista)
 }
 
 

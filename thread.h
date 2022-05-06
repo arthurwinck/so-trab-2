@@ -61,6 +61,17 @@ private:
      */ 
 };
 
+//Implementação do Construtor
+template<typename ... Tn>
+Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
+    if (entry) {
+        //Criação do Contexto...
+        this->_context = new Context(entry, sizeof...(Tn), an...);
+        //... Outras inicializações
+    }
+};
+
+
 __END_API
 
 #endif
