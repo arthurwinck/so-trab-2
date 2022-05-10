@@ -30,7 +30,9 @@ void CPU::switch_context(Context *from, Context *to)
 {
      //implementação do método
      //salva o primeiro contexto e restaura o segundo
-     swapcontext(&from->_context, &to->_context);
+     if (from && to) {
+        swapcontext(&from->_context, &to->_context);
+     }
 }
 
 __END_API

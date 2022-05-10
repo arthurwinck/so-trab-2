@@ -33,7 +33,16 @@ public:
      * Deve encapsular a chamada para a troca de contexto realizada pela class CPU.
      * Valor de retorno é negativo se houve erro, ou zero.
      */ 
-    static int switch_context(Thread * prev, Thread * next);
+    static int switch_context(Thread * prev, Thread * next) {
+        if (prev && next) {
+            // switch_context de CPU é void, ou seja, não sabemos se ele conseguiu executar normalmente
+            // Talvez mudar switch_context de CPU para int?
+            CPU::switch_context(prev->_context, next->_context);
+            return 0;
+        } else {
+            return -1;
+        }
+    }
 
     /*
      * Termina a thread.
@@ -70,7 +79,6 @@ Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
         //... Outras inicializações
     }
 };
-
 
 __END_API
 

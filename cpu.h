@@ -45,7 +45,12 @@ CPU::Context::Context(void (* func)(Tn ...), Tn ... an) {
     save();
     _context.uc_link = 0;
     //Alocação da memória para a stack
-    _context.uc_stack.ss_sp=malloc(STACK_SIZE);
+
+    //Isso tá certo?
+    // Temos que usar new, mas não temos um tipo, então alocamos um char com tamanho da stack
+    _stack = new char[STACK_SIZE]
+    _context.uc_stack.ss_sp = _stack
+
     _context.uc_stack.ss_size=STACK_SIZE;
     //Flags da stack
     _context.uc_stack.ss_flags=0;
