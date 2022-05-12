@@ -9,4 +9,8 @@ void Thread::thread_exit(int exit_code) {
 
 }
 
+int Thread::id() {
+    return Thread::_id;
+}
+
 __END_API

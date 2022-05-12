@@ -16,6 +16,15 @@ template<typename T>
 struct Traits {
 };
 
+
+/*template<> struct Traits<Debug>: public Traits<void>
+{
+    static const bool error   = false;
+    static const bool warning = false;
+    static const bool info    = false;
+    static const bool trace   = false;
+};*/
+
 template<> struct Traits<CPU>
 {
     //Adicionar aqui a declaração do tamanho da Pilha
