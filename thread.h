@@ -38,6 +38,7 @@ public:
             // switch_context de CPU é void, ou seja, não sabemos se ele conseguiu executar normalmente
             // Talvez mudar switch_context de CPU para int?
             CPU::switch_context(prev->_context, next->_context);
+            Thread::_running = next;
             return 0;
         } else {
             return -1;
@@ -57,17 +58,36 @@ public:
     int id();
 
     /*
-     * Qualquer outro método que você achar necessário para a solução.
-     */ 
+    * Qualquer outro método que você achar necessário para a solução.
+    */
+
+    /*
+    * Devolve um novo id para uma thread
+    */
+    static int give_id() {
+        return Thread::uid;
+    }
+
+    /*
+    *  Retorna o contexto de uma thread
+    */
+    Context* context() {return _context;}
 
 private:
     int _id;
     Context * volatile _context;
     static Thread * _running;
+    
+    /*
+    * Atributo que guarda o valor do último id gerado
+    * (É incrementado sempre que uma nova thread é cridada)
+    */
+    static int uid;
 
     /*
      * Qualquer outro atributo que você achar necessário para a solução.
      */ 
+
 };
 
 //Implementação do Construtor
@@ -77,6 +97,9 @@ Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
         //Criação do Contexto...
         this->_context = new Context(entry, sizeof...(Tn), an...);
         //... Outras inicializações
+        // Incremento o valor de id para gerar um novo id para a threadd
+        Thread::id ++;
+        this->_id = Thread::give_id()
     }
 };
 
