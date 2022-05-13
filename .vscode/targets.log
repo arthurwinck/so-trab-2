@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu May 12 19:29:43 2022
+# Make data base, printed on Fri May 13 11:20:11 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-d3d66c04-4556-43df-bcfe-981995a6fadf.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a609e90e-0b31-47c2-9fa2-281abf661af0.sock
 # environment
 VSCODE_CWD = /home/bingas/Projects/so-trab-2
 # environment
@@ -67,7 +67,7 @@ XAUTHORITY = /run/user/1000/gdm/Xauthority
 # default
 .INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
 # environment
-GNOME_TERMINAL_SERVICE = :1.106
+GNOME_TERMINAL_SERVICE = :1.95
 # makefile
 MAKEFLAGS = pqrR
 # makefile
@@ -103,7 +103,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4750
+VSCODE_PID = 4043
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -111,7 +111,7 @@ XDG_SESSION_TYPE = x11
 # environment
 CONDA_PYTHON_EXE = /home/bingas/anaconda3/bin/python
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1755,unix/pop-os:/tmp/.ICE-unix/1755
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1780,unix/pop-os:/tmp/.ICE-unix/1780
 # automatic
 *F = $(notdir $*)
 # environment
@@ -125,7 +125,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # makefile (from 'Makefile', line 1)
-OBJS = main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h system.cc system.h thread.h thread.cc
+OBJS = main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.h debug.cc system.cc system.h thread.h thread.cc
 # environment
 GNOME_DESKTOP_SESSION_ID = this-is-deprecated
 # environment
@@ -139,7 +139,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/451a146d_5adb_465b_8f6e_6b81dcbfdd91
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6c63dbc3_0f87_4861_805c_61f780b85c8f
 # environment
 MAKELEVEL := 0
 # default
@@ -193,7 +193,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1781
+SYSTEMD_EXEC_PID = 1803
 # environment
 DISPLAY = :1
 # environment
@@ -295,7 +295,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # Not a target:
 thread.cc:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 10:16:18.914668028
+#  Last modified 2022-05-13 11:01:44.564250857
 #  File has been updated.
 #  Successfully updated.
 
@@ -316,7 +316,7 @@ debug.cc:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 12:00:52.033300637
+#  Last modified 2022-05-13 10:40:39.251772264
 #  File has been updated.
 #  Successfully updated.
 
@@ -330,7 +330,7 @@ system.h:
 # Not a target:
 system.cc:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 10:16:18.914668028
+#  Last modified 2022-05-13 10:59:42.302304897
 #  File has been updated.
 #  Successfully updated.
 
@@ -340,7 +340,7 @@ system.cc:
 #  Modification time never checked.
 #  File has not been updated.
 
-all: main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h system.cc system.h thread.h thread.cc
+all: main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.h debug.cc system.cc system.h thread.h thread.cc
 #  Command line target.
 #  Implicit rule search has not been done.
 #  Implicit/static pattern stem: ''
@@ -354,13 +354,13 @@ all: main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h s
 # automatic
 # < := main.cc
 # automatic
-# + := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h system.cc system.h thread.h thread.cc
+# + := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.h debug.cc system.cc system.h thread.h thread.cc
 # automatic
 # % := 
 # automatic
-# ^ := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h system.cc system.h thread.h thread.cc
+# ^ := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.h debug.cc system.cc system.h thread.h thread.cc
 # automatic
-# ? := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.cc debug.h system.cc system.h thread.h thread.cc
+# ? := main.cc cpu.cc cpu.h main_class.h main_class.cc traits.h debug.h debug.cc system.cc system.h thread.h thread.cc
 # automatic
 # | := 
 # variable set hash-table stats:
@@ -392,7 +392,7 @@ main_class.cc:
 # Not a target:
 thread.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 10:16:18.914668028
+#  Last modified 2022-05-13 10:19:25.612125424
 #  File has been updated.
 #  Successfully updated.
 
@@ -406,7 +406,7 @@ main.cc:
 # Not a target:
 traits.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 10:16:18.914668028
+#  Last modified 2022-05-13 10:20:16.34569747
 #  File has been updated.
 #  Successfully updated.
 
@@ -437,6 +437,6 @@ cpu.h:
 # strcache performance: lookups = 42 / hit rate = 45%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/42=0%
-# Finished Make data base on Thu May 12 19:29:43 2022
+# Finished Make data base on Fri May 13 11:20:11 2022
 
  

@@ -65,6 +65,7 @@ public:
     * Devolve um novo id para uma thread
     */
     static int give_id() {
+        
         return Thread::uid;
     }
 
@@ -98,8 +99,8 @@ Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
         this->_context = new Context(entry, sizeof...(Tn), an...);
         //... Outras inicializações
         // Incremento o valor de id para gerar um novo id para a threadd
-        Thread::id ++;
-        this->_id = Thread::give_id()
+        Thread::uid = Thread::uid + 1;
+        this->_id = Thread::give_id();
     }
 };
 
