@@ -96,7 +96,7 @@ template<typename ... Tn>
 Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
     if (entry) {
         //Criação do Contexto...
-        this->_context = new CPU::Context((void(*)(char*)) entry, sizeof...(Tn), an...);
+        this->_context = new CPU::Context(entry, an...);
         //... Outras inicializações
         // Incremento o valor de id para gerar um novo id para a threadd
         Thread::uid = Thread::uid + 1;
