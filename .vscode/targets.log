@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri May 13 11:20:11 2022
+# Make data base, printed on Fri May 13 20:14:59 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ SSH_AGENT_LAUNCHER = gnome-keyring
 # environment
 SNAP_INSTANCE_KEY = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-a609e90e-0b31-47c2-9fa2-281abf661af0.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2e7c82d5-d2e1-48b1-b6e6-a5904742c10a.sock
 # environment
 VSCODE_CWD = /home/bingas/Projects/so-trab-2
 # environment
@@ -103,7 +103,7 @@ SNAP_REEXEC =
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 4043
+VSCODE_PID = 10878
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -111,7 +111,7 @@ XDG_SESSION_TYPE = x11
 # environment
 CONDA_PYTHON_EXE = /home/bingas/anaconda3/bin/python
 # environment
-SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1780,unix/pop-os:/tmp/.ICE-unix/1780
+SESSION_MANAGER = local/pop-os:@/tmp/.ICE-unix/1707,unix/pop-os:/tmp/.ICE-unix/1707
 # automatic
 *F = $(notdir $*)
 # environment
@@ -139,7 +139,7 @@ XMODIFIERS = @im=ibus
 # environment
 SHLVL = 1
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/6c63dbc3_0f87_4861_805c_61f780b85c8f
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/abe98f39_ee26_40c5_99a1_701d7a233dde
 # environment
 MAKELEVEL := 0
 # default
@@ -193,7 +193,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := all
 # environment
-SYSTEMD_EXEC_PID = 1803
+SYSTEMD_EXEC_PID = 1734
 # environment
 DISPLAY = :1
 # environment
@@ -275,7 +275,6 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 # variable set hash-table stats:
 # Load=131/1024=13%, Rehash=0, Collisions=12/170=7%
 
- 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
@@ -286,6 +285,7 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # 18 files, no impossibilities in 1 directories.
 
+ 
 # Implicit Rules
 
 # No implicit rules.
@@ -437,6 +437,6 @@ cpu.h:
 # strcache performance: lookups = 42 / hit rate = 45%
 # hash-table stats:
 # Load=23/8192=0%, Rehash=0, Collisions=0/42=0%
-# Finished Make data base on Fri May 13 11:20:11 2022
+# Finished Make data base on Fri May 13 20:14:59 2022
 
  
