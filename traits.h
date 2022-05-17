@@ -1,6 +1,7 @@
 #ifndef traits_h
 #define traits_h
 
+// UPDATE: Adicionar se quer ou não e quais o debugging são os níveis para cada classe do sistema
 //Não alterar as 3 declarações abaixo
 
 #define __BEGIN_API             namespace SOLUTION {
@@ -16,7 +17,10 @@ class Debug; //declaração do Debug para que possamos colocar os atributos
 template<typename T>
 struct Traits {
 };
-
+// UPDATE: Fazer isso para todas as classes do sistema
+template<> struct Traits<System> : public Traits<void> {
+    static const bool debugged = true;
+}
 
 template<> struct Traits<Debug>: public Traits<void>
 {

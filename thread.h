@@ -35,10 +35,14 @@ public:
      */ 
     static int switch_context(Thread * prev, Thread * next) {
         if (prev && next) {
+            //db<Thread>(TRC) << "Trocando contexto Thread::switch_context()"
             // switch_context de CPU é void, ou seja, não sabemos se ele conseguiu executar normalmente
             // Talvez mudar switch_context de CPU para int?
-            CPU::switch_context(prev->_context, next->_context);
+            
+            //UPDATE: ORDEM ERRADA, primeiro se troca o _running depois executa switch_context
+            // Se for feito do jeito inverso, quando chega em switch_context o código n executa mais 
             Thread::_running = next;
+            CPU::switch_context(prev->_context, next->_context);
             return 0;
         } else {
             return -1;
@@ -95,6 +99,10 @@ private:
 template<typename ... Tn>
 Thread::Thread(void (* entry)(Tn ...), Tn ... an) {
     if (entry) {
+        
+        //UPDATE: Chamada do debugger
+        // db<Thread>(TRC) << "Thread::Thread(): criou thread"
+        
         //Criação do Contexto...
         this->_context = new CPU::Context(entry, an...);
         //... Outras inicializações

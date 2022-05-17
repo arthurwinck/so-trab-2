@@ -21,6 +21,7 @@ public:
         
         mainContext = new CPU::Context();
 
+        //UPDATE: Sempre usar set/get para acessar atributos
         CPU::switch_context(mainContext, ThreadMain->context());
 
         delete mainContext;

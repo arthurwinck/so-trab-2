@@ -9,7 +9,9 @@ Thread* Thread::_running = nullptr;
 
 void Thread::thread_exit(int exit_code) {
     //Implementação da destruição da thread
+    //UPDATE: debug = db<>....
     delete this->_context;
+    Thread::uid --;
 }
 
 /*
